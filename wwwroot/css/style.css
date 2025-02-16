@@ -325,7 +325,8 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*-------------------------------------
         5. Service 
 --------------------------------------*/
-.service { padding: 260px 0 87px;}
+.service {
+    padding: 160px 0 160px 0px; } /* UPATED */
 
 .single-service-item{
     text-align: center;
