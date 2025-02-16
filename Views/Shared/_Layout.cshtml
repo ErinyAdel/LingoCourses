@@ -1,6 +1,19 @@
-﻿<!doctype html>
-<html class="no-js" lang="en">
+﻿﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@using Microsoft.AspNetCore.Mvc.Localization
+@using System.Globalization
 
+@inject IOptions<RequestLocalizationOptions> locOptions
+@inject IViewLocalizer localizer
+
+@{
+	var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+	var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
+<!doctype html>
+<html lang="@CultureInfo.CurrentCulture.Name" dir="@((CultureInfo.CurrentCulture.Name == "ar") ? "rtl" : "ltr")">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +32,7 @@
 	<link rel="stylesheet" href="css/bootsnav.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -31,16 +45,23 @@
 							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 								<i class="fa fa-bars"></i>
 							</button>
-							<a class="navbar-brand" href="index.html">Lingo Courses<span></span></a>
+							<a class="navbar-brand" href="">Lingo Courses<span></span></a>
 						</div>
 						<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 							<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 								<li class=" scroll active"><a href="#home">home</a></li>
 								<li class="scroll"><a href="#courses">Courses</a></li>
-								<li class="scroll"><a href="#featured-cars">featured cars</a></li>
-								<li class="scroll"><a href="#new-cars">new cars</a></li>
-								<li class="scroll"><a href="#brand">brands</a></li>
+								<li class="scroll"><a href="#reviews">Reviews</a></li>
 								<li class="scroll"><a href="#contact">contact</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+										@requestCulture.RequestCulture.UICulture.DisplayName <span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu">
+										<li><a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="ar">العربية</a></li>
+										<li><a asp-controller="Home" asp-action="SetLanguage" asp-route-culture="en">English</a></li>
+									</ul>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -68,58 +89,99 @@
 
 	<footer id="contact" class="contact">
 		<div class="container">
-			<div class="footer-top">
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="single-footer-widget">
-							<div class="footer-logo">
-								<a href="index.html">Lingo Courses</a>
+			@if (CultureInfo.CurrentCulture.Name == "en")
+			{
+				<div class="footer-top">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-footer-widget">
+								<div class="footer-logo">
+									<a href="">Lingo Courses</a>
+								</div>
+								<p>
+									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
+								</p>
+								<div class="footer-contact">
+									<p>+20 1207091357</p>
+									<p>+20 1287319435</p>
+								</div>
 							</div>
-							<p>
-								Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
-							</p>
-							<div class="footer-contact">
-								<p>+20 1207091357</p>
-								<p>+20 1287319435</p>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-footer-widget">
+								<h2>about devloon</h2>
+								<ul>
+									<li><a href="#">about us</a></li>
+									<li><a href="#">career</a></li>
+									<li><a href="#">terms <span> of service</span></a></li>
+									<li><a href="#">privacy policy</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-footer-widget">
+								<h2>Our Courses</h2>
+								<ul>
+									<li><a href="#">Graphic Design</a></li>
+									<li><a href="#">UI / UX</a></li>
+									<li><a href="#">Marketing & Public Speaking</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-6">
-						<div class="single-footer-widget">
-							<h2>about devloon</h2>
-							<ul>
-								<li><a href="#">about us</a></li>
-								<li><a href="#">career</a></li>
-								<li><a href="#">terms <span> of service</span></a></li>
-								<li><a href="#">privacy policy</a></li>
-							</ul>
+				</div>
+			}
+			else
+			{
+				<div class="footer-top">
+					<div class="row">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-footer-widget">
+								<h2>Our Courses</h2>
+								<ul>
+									<li><a href="#">Graphic Design</a></li>
+									<li><a href="#">UI / UX</a></li>
+									<li><a href="#">Marketing & Public Speaking</a></li>
+								</ul>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-3 col-xs-12">
-						<div class="single-footer-widget">
-							<h2>Our Courses</h2>
-							<div class="row">
-								<div class="col-md-7 col-xs-6">
-									<ul>
-										<li><a href="#">Graphic Design</a></li>
-										<li><a href="#">UI / UX</a></li>
-										<li><a href="#">Marketing & Public Speaking</a></li>
-									</ul>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-footer-widget">
+								<h2>about devloon</h2>
+								<ul>
+									<li><a href="#">about us</a></li>
+									<li><a href="#">career</a></li>
+									<li><a href="#">terms <span> of service</span></a></li>
+									<li><a href="#">privacy policy</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6">
+							<div class="single-footer-widget">
+								<div class="footer-logo">
+									<a href="">Lingo Courses</a>
+								</div>
+								<p>
+									Ased do eiusm tempor incidi ut labore et dolore magnaian aliqua. Ut enim ad minim veniam.
+								</p>
+								<div class="footer-contact">
+									<p>+20 1207091357</p>
+									<p>+20 1287319435</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
+			}
+			
 			<div class="footer-copyright">
 				<div class="row">
 					<div class="col-xxl-12">
 						<div class="footer-social">
-							<a href="https://www.facebook.com/share/1Ds6Ry3yKc/" target="_blank"><i class="fa fa-facebook"></i></a>
-							<a href="https://www.tiktok.com/t=ZS-8ty3hgqu425&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-							<a href="https://www.linkedin.com/in/youssef-ehab-ba4578196/" target="_blank"><i class="fa fa-linkedin"></i></a>
-							<a href="https://www.behance.net/youssefehab221" target="_blank"><i class="fa fa-behance"></i></a>
+							<a href="https://www.facebook.com/share/1Ds6Ry3yKc/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+							<a href="https://www.tiktok.com/@@lingo.courses?_t=ZS-8ty3hgqu425&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+							<a href="https://www.linkedin.com/in/youssef-ehab-ba4578196/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+							<a href="https://www.behance.net/youssefehab221" target="_blank"><i class="fa-brands fa-behance"></i></a>
 						</div>
 					</div>
 				</div>
