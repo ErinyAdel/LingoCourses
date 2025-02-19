@@ -53,10 +53,10 @@
 						</div>
 						<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 							<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-								<li class=" scroll active"><a href="#home">home</a></li>
-								<li class="scroll"><a href="#courses">Courses</a></li>
-								<li class="scroll"><a href="#reviews">Reviews</a></li>
-								<li class="scroll"><a href="#contact">contact</a></li>
+								<li class=" scroll active"><a href="#home">@localizer["Home"]</a></li>
+								<li class="scroll"><a href="#courses">@localizer["Courses"]</a></li>
+								<li class="scroll"><a href="#reviews">@localizer["Reviews"]</a></li>
+								<li class="scroll"><a href="#contact">@localizer["Contact"]</a></li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 										@requestCulture.RequestCulture.UICulture.DisplayName <span class="caret"></span>
@@ -76,11 +76,9 @@
 
 		<div class="container">
 			<div class="welcome-hero-txt">
-				<h2>Certified Courses For Kids & Adults</h2>
-				<p>
-					Graphic Design & UI / UX & Marketing & AI
-				</p>
-				<button class="welcome-btn" onclick="window.location.href='#contact'">Contact Us</button>
+				<h2>@localizer["HeaderTitle"]</h2>
+				<p>@localizer["HeaderTitleContent"]</p>
+				<button class="welcome-btn" onclick="window.location.href='#contact'">@localizer["Contact Us"]</button>
 			</div>
 		</div>
 	</section>
