@@ -1472,3 +1472,11 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 }
 
+/* NEW */
+[dir="rtl"] .navbar-header {
+    float: right !important;
+}
+
+[dir="rtl"] .navbar-collapse {
+    float: left !important;
+}
