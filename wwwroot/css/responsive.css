@@ -73,6 +73,7 @@ File Name: responsive.css
     }
     .shop_img {
         padding-left: 0px;
+        padding-right: 0; /* NEW */
     }
     .test_box {
         padding: 0 10px 40px 10px;
@@ -126,6 +127,7 @@ File Name: responsive.css
     }
     .shop_img {
         padding-left: 0;
+        padding-right: 0; /* NEW */
     }
     .about .titlepage {
         max-width: inherit;
@@ -251,6 +253,7 @@ File Name: responsive.css
     }
     .shop_img {
         padding-left: 0;
+        padding-right: 0; /* NEW */
     }
     .d_grid {
         display: grid;

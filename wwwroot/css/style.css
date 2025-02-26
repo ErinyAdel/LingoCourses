@@ -230,6 +230,28 @@ button {
      display: inline-block;
 }
 
+/* NEW */
+[dir="rtl"] .titlepage {
+    text-align: right;
+}
+
+    /* NEW */
+[dir="rtl"] .titlepage h2 {
+    text-align: right;
+}
+
+    /* NEW */
+[dir="rtl"] .titlepage p {
+    direction: rtl;
+    text-align: right;
+}
+
+/* NEW */
+[dir="ltr"] .titlepage h2,
+[dir="ltr"] .titlepage p {
+    padding-right: 60px;
+}
+
 .d_flex {
      display: flex;
      align-items: center;
@@ -316,7 +338,7 @@ html[dir="rtl"] .read_more:before {
 }
 
 .img_responsive {
-     max-width: 100%;
+     max-width: 80%;
 }
 
 
@@ -1131,3 +1153,18 @@ ul.social_icon li a:hover {
 
 
 /** end contact **/
+
+/* NEW */
+[dir="rtl"] .titlepage {
+    text-align: right;
+}
+
+[dir="rtl"] .shop_img {
+    text-align: left; /* Ensures the image aligns correctly */
+}
+
+[dir="rtl"] .col-md-5 {
+    flex-grow: 1; /* Allow it to take more space */
+    max-width: 45%; /* Prevent excessive shrinking */
+    min-width: 40%; /* Maintain a reasonable width */
+}

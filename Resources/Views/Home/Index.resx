@@ -120,4 +120,10 @@
   <data name="Read More" xml:space="preserve">
     <value>Read More</value>
   </data>
+  <data name="InstructorTitle" xml:space="preserve">
+    <value>InstructorTitle</value>
+  </data>
+  <data name="InstructorContent" xml:space="preserve">
+    <value>InstructorContent</value>
+  </data>
 </root>
