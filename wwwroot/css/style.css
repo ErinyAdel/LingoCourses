@@ -746,11 +746,11 @@ ul.email li i {
 }
 
 #myCarousel a.carousel-control-prev {
-     left: 44%;
+     left: 39%;
 }
 
 #myCarousel a.carousel-control-next {
-     right: 44%;
+     right: 39%;
 }
 
 #myCarousel a.carousel-control-next:focus,
@@ -1165,4 +1165,18 @@ ul.social_icon li a:hover {
     flex-grow: 1; /* Allow it to take more space */
     max-width: 45%; /* Prevent excessive shrinking */
     min-width: 40%; /* Maintain a reasonable width */
+}
+
+/* NEW */
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 0 50px 0 50px; /* Adds spacing */
+}
+
+.carousel-controls a {
+    pointer-events: auto; /* Ensures buttons remain clickable */
 }

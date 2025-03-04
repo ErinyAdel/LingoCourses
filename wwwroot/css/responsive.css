@@ -21,7 +21,7 @@ File Name: responsive.css
         padding: 90px 0;
     }
     #myCarousel a.carousel-control-prev {
-       left: 41%;
+       left: 39%;
     }
     ul.fullink li {
         padding: 0px 16px;
@@ -82,10 +82,10 @@ File Name: responsive.css
         margin: 0;
     }
     #myCarousel a.carousel-control-prev {
-        left: 41%;
+        left: 39%;
     }
     #myCarousel a.carousel-control-next {
-        right: 41%;
+        right: 39%;
     }
     .border_left {
         padding-left: 20px;
@@ -284,10 +284,10 @@ File Name: responsive.css
         top: 98%;
     }
     #myCarousel a.carousel-control-prev {
-        left: 25%;
+        left: 39%;
     }
     #myCarousel a.carousel-control-next {
-        right: 24%;
+        right: 39%;
     }
     .white_bg {
         margin: 0;
