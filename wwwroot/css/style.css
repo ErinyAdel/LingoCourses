@@ -337,8 +337,10 @@ html[dir="rtl"] .read_more:before {
      text-align: center;
 }
 
+/* UPDATED */
 .img_responsive {
     max-width: 50%;
+    border-radius: 10px;
 }
 /**-- heading section --**/
 
