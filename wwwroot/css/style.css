@@ -338,10 +338,8 @@ html[dir="rtl"] .read_more:before {
 }
 
 .img_responsive {
-     max-width: 80%;
+    max-width: 50%;
 }
-
-
 /**-- heading section --**/
 
 
