@@ -15,261 +15,134 @@
 
 }
 
-<div class="class" id="home">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="titlepage text_align_center">
-                    <h2>Our Courses</h2>
-                    <p>There are many variations of passages of Lorem</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 margi_bottom">
-                <div class="class_box text_align_center">
-                    <i><img src="images/class1.png" alt="#" /></i>
-                    <h3>Skateboard</h3>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterationThere are many variations </p>
-                </div>
-                <a class="read_more" href="">@localizer["Read More"]</a>
-            </div>
-            <div class="col-md-4 margi_bottom">
-                <div class="class_box blue text_align_center">
-                    <i><img src="images/class2.png" alt="#" /></i>
-                    <h3>Skateboard</h3>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterationThere are many variations </p>
-                </div>
-                <a class="read_more" href="">@localizer["Read More"]</a>
-            </div>
-            <div class="col-md-4 margi_bottom">
-                <div class="class_box text_align_center">
-                    <i><img src="images/class3.png" alt="#" /></i>
-                    <h3>Skateboard</h3>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterationThere are many variations </p>
-                </div>
-                <a class="read_more" href="">@localizer["Read More"]</a>
+<section id="home" class="hero section">
+    <img src="img/hero-bg.jpg" alt="" data-aos="fade-in">
+    <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2>Lingo Courses</h2>
+                <p>I'm a professional illustrator from San Francisco</p>
+                <a href="about.html" class="btn-get-started">About Me</a>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="about" id="about_us">
-    <div class="container-fluid">
-        <div class="row d_flex">
-            <div class="col-md-6">
-                <div class="titlepage text_align_left">
-                    <h2>About <br>Skating <br> school</h2>
-                    <p>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterationThere are many variatioThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alterationThere are many variationsns
-                    </p>
-                    <div class="link_btn">
-                        <a class="read_more" href="about.html">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="about_img text_align_center">
-                    <figure><img src="images/about.png" alt="#" /></figure>
-                </div>
-            </div>
-        </div>
+<section id="about_instructor" class="portfolio-details section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>About Instructor</h2>
+        <p>Eng. Youssef Ehab</p>
     </div>
-</div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-5">
+                <div class="portfolio-details-slider swiper init-swiper">
+                    <script type="application/json" class="swiper-config">
+                        {
+                          "loop": true,
+                          "speed": 600,
+                          "autoplay": {
+                            "delay": 5000
+                          },
+                          "slidesPerView": "auto",
+                          "pagination": {
+                            "el": ".swiper-pagination",
+                            "type": "bullets",
+                            "clickable": true
+                          }
+                        }
+                    </script>
 
-<div class="" id="about_instructor">
-    <div class="container-fluid">
-        <div>
-            <br /><br /><br /><br /><br /><br />
-        </div>
-        <div class="row d_flex d_grid">
-            <div class="col-md-5">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide">
+                            <img src="img/Instructor/inst1.jpeg" alt="">
+                        </div>
 
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
+                        <div class="swiper-slide">
+                            <img src="img/Instructor/inst2.jpeg" alt="">
+                        </div>
 
-                    <!-- Slides -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <figure class="d-flex justify-content-center align-items-center">
-                                <img class="img_responsive" src="images/inst1.jpeg" alt="#" />
-                            </figure>
+                        <div class="swiper-slide">
+                            <img src="img/Instructor/inst3.jpeg" alt="">
                         </div>
-                        <div class="carousel-item">
-                            <figure class="d-flex justify-content-center align-items-center">
-                                <img class="img_responsive" src="images/inst2.jpeg" alt="#" />
-                            </figure>
+
+                        <div class="swiper-slide">
+                            <img src="img/Instructor/inst4.jpeg" alt="">
                         </div>
-                        <div class="carousel-item">
-                            <figure class="d-flex justify-content-center align-items-center">
-                                <img class="img_responsive" src="images/inst3.jpeg" alt="#" />
-                            </figure>
-                        </div>
-                        <div class="carousel-item">
-                            <figure class="d-flex justify-content-center align-items-center">
-                                <img class="img_responsive" src="images/inst4.jpeg" alt="#" />
-                            </figure>
-                        </div>
+
                     </div>
-
-                    <!-- Controls -->
-                    <div class="carousel-controls">
-                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                            <i class="fa fa-angle-left" aria-hidden="true"></i>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                            <i class="fa fa-angle-right" aria-hidden="true"></i>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div class="col-md-7">
-                <div class="titlepage">
+            <div class="col-lg-7">
+                <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                     <h2>@localizer["InstructorTitle"]</h2>
-                    <p>
-                        @localizer["InstructorContent"]
-                    </p>
+                    <p>@localizer["InstructorContent"]</p>
                 </div>
             </div>
         </div>
-        <div>
-            <br /><br /><br /><br /><br /><br />
-        </div>
     </div>
-</div>
+</section>
 
-<div class="testimonial" id="our_students">
+<section id="students_reviews" class="portfolio section">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>@localizer["Students Reviews Title"]</h2>
+        <p>@localizer["Students Reviews Content"]</p>
+    </div>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="titlepage text_align_center">
-                    <h2>Testimonial</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-3">
-                                            <div class="test_box text_align_center">
-                                                <span><img src="images/test1.png" alt="#" /></span>
-                                                <h4>Jone Lo</h4>
-                                                <img class="img_responsive" src="images/te.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="test_box white_bg text_align_center">
-                                                <span><img src="images/test2.png" alt="#" /></span>
-                                                <h4>Michale</h4>
-                                                <img class="img_responsive" src="images/te2.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="test_box text_align_center">
-                                                <span><img src="images/test3.png" alt="#" /></span>
-                                                <h4>Disol</h4>
-                                                <img class="img_responsive" src="images/te.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-3">
-                                            <div class="test_box text_align_center">
-                                                <span><img src="images/test2.png" alt="#" /></span>
-                                                <h4>Michale</h4>
-                                                <img class="img_responsive" src="images/te.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="test_box white_bg text_align_center">
-                                                <span><img src="images/test3.png" alt="#" /></span>
-                                                <h4>Disol</h4>
-                                                <img class="img_responsive" src="images/te2.png" alt="#" />
-                                                <p> humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="test_box text_align_center">
-                                                <span><img src="images/test1.png" alt="#" /></span>
-                                                <h4>Jone Lo</h4>
-                                                <img class="img_responsive" src="images/te.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="container-fluid">
-                                <div class="carousel-caption relative">
-                                    <div class="row d_flex">
-                                        <div class="col-md-3">
-                                            <div class="test_box text_align_center">
-                                                <span><img src="images/test3.png" alt="#" /></span>
-                                                <h4>Disol</h4>
-                                                <img class="img_responsive" src="images/te.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="test_box  white_bg text_align_center">
-                                                <span><img src="images/test1.png" alt="#" /></span>
-                                                <h4>Jone Lo</h4>
-                                                <img class="img_responsive" src="images/te2.png" alt="#" />
-                                                <p> humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="test_box text_align_center">
-                                                <span><img src="images/test2.png" alt="#" /></span>
-                                                <h4>Michale</h4>
-                                                <img class="img_responsive" src="images/te.png" alt="#" />
-                                                <p>humour, or randomised words which don't look even slightly believable. If you are</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                <li data-filter="*" class="filter-active">@localizer["All"]</li>
+                <li data-filter=".filter-graphics-design">@localizer["Graphics Design"]</li>
+                <li data-filter=".filter-ui-ux">@localizer["UI / UX"]</li>
+            </ul>
+            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-graphics-design">
+                    <img src="img/reviews/rev1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>@localizer["Review"]</h4>
+                        <a href="img/reviews/rev1.jpg" title="@localizer["Review"]" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                     </div>
-                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                        <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                        <i class="fa fa-angle-right" aria-hidden="true"></i>
-                        <span class="sr-only">Next</span>
-                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ui-ux">
+                    <img src="img/reviews/img1.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>@localizer["Eng Yousef Ehab"]</h4>
+                        <a href="img/reviews/img1.jpg" title="@localizer["Eng Yousef Ehab"]" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-graphics-design">
+                    <img src="img/reviews/rev3.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>@localizer["Review"]</h4>
+                        <a href="img/reviews/rev3.jpg" title="@localizer["Review"]" data-gallery="portfolio-gallery-graphics-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ui-ux">
+                    <video width="100%" height="auto" controls muted playsinline preload="auto" data-aos="fade-in">
+                        <source src="video/rev01.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="portfolio-info">
+                        <h4>Product 3</h4>
+                        <a href="video/rev01.mp4" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ui-ux">
+                    <img src="img/reviews/rev2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>@localizer["Review"]</h4>
+                        <a href="img/reviews/rev2.jpg" title="@localizer["Review"]" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-graphics-design">
+                    <img src="img/reviews/img2.jpg" class="img-fluid" alt="">
+                    <div class="portfolio-info">
+                        <h4>Branding 2</h4>
+                        <a href="img/reviews/img2.jpg" title="Branding 2" data-gallery="portfolio-gallery-graphics-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>

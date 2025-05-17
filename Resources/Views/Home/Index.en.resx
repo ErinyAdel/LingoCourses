@@ -153,4 +153,25 @@
 &lt;br /&gt;
 🔹 Taught at multiple academies and platforms, including: 3C Creative Children Community</value>
   </data>
+  <data name="Students Reviews Content" xml:space="preserve">
+    <value>Reviews of our students about courses we provide</value>
+  </data>
+  <data name="Students Reviews Title" xml:space="preserve">
+    <value>Students Reviews</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Graphics Design" xml:space="preserve">
+    <value>Graphics Design</value>
+  </data>
+  <data name="UI / UX" xml:space="preserve">
+    <value>UI / UX</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="Eng Yousef Ehab" xml:space="preserve">
+    <value>Eng Yousef Ehab</value>
+  </data>
 </root>
