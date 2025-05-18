@@ -12,137 +12,40 @@
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 
     ViewData["Title"] = "Home Page";
-
 }
 
-<section id="home" class="hero section">
-    <img src="img/hero-bg.jpg" alt="" data-aos="fade-in">
-    <div class="container text-center" data-aos="zoom-out" data-aos-delay="100">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <h2>Lingo Courses</h2>
-                <p>I'm a professional illustrator from San Francisco</p>
-                <a href="about.html" class="btn-get-started">About Me</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="about_instructor" class="portfolio-details section">
-    <div class="container section-title" data-aos="fade-up">
-        <h2>About Instructor</h2>
-        <p>Eng. Youssef Ehab</p>
-    </div>
-    <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-            <div class="col-lg-5">
-                <div class="portfolio-details-slider swiper init-swiper">
-                    <script type="application/json" class="swiper-config">
-                        {
-                          "loop": true,
-                          "speed": 600,
-                          "autoplay": {
-                            "delay": 5000
-                          },
-                          "slidesPerView": "auto",
-                          "pagination": {
-                            "el": ".swiper-pagination",
-                            "type": "bullets",
-                            "clickable": true
-                          }
-                        }
-                    </script>
-
-                    <div class="swiper-wrapper align-items-center">
-                        <div class="swiper-slide">
-                            <img src="img/Instructor/inst1.jpeg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="img/Instructor/inst2.jpeg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="img/Instructor/inst3.jpeg" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="img/Instructor/inst4.jpeg" alt="">
-                        </div>
-
+<section id="about_instructor">
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="img/Instructor/inst1.jpeg" style="object-fit: cover;">
                     </div>
-                    <div class="swiper-pagination"></div>
                 </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-                    <h2>@localizer["InstructorTitle"]</h2>
+                <div class="col-lg-7">
+                    <div class="section-title position-relative mb-4">
+                        <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">@localizer["About Instructor"]</h6>
+                        <h1 class="display-4">@localizer["InstructorTitle"]</h1>
+                    </div>
                     <p>@localizer["InstructorContent"]</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="students_reviews" class="portfolio section">
-    <div class="container section-title" data-aos="fade-up">
-        <h2>@localizer["Students Reviews Title"]</h2>
-        <p>@localizer["Students Reviews Content"]</p>
-    </div>
-    <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-            <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-                <li data-filter="*" class="filter-active">@localizer["All"]</li>
-                <li data-filter=".filter-graphics-design">@localizer["Graphics Design"]</li>
-                <li data-filter=".filter-ui-ux">@localizer["UI / UX"]</li>
-            </ul>
-            <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-graphics-design">
-                    <img src="img/reviews/rev1.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>@localizer["Review"]</h4>
-                        <a href="img/reviews/rev1.jpg" title="@localizer["Review"]" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ui-ux">
-                    <img src="img/reviews/img1.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>@localizer["Eng Yousef Ehab"]</h4>
-                        <a href="img/reviews/img1.jpg" title="@localizer["Eng Yousef Ehab"]" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-graphics-design">
-                    <img src="img/reviews/rev3.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>@localizer["Review"]</h4>
-                        <a href="img/reviews/rev3.jpg" title="@localizer["Review"]" data-gallery="portfolio-gallery-graphics-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ui-ux">
-                    <video width="100%" height="auto" controls muted playsinline preload="auto" data-aos="fade-in">
-                        <source src="video/rev01.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="portfolio-info">
-                        <h4>Product 3</h4>
-                        <a href="video/rev01.mp4" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ui-ux">
-                    <img src="img/reviews/rev2.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>@localizer["Review"]</h4>
-                        <a href="img/reviews/rev2.jpg" title="@localizer["Review"]" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-graphics-design">
-                    <img src="img/reviews/img2.jpg" class="img-fluid" alt="">
-                    <div class="portfolio-info">
-                        <h4>Branding 2</h4>
-                        <a href="img/reviews/img2.jpg" title="Branding 2" data-gallery="portfolio-gallery-graphics-design" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                    <div class="row pt-3 mx-0">
+                        <div class="col-6 px-0">
+                            <div class="bg-success text-center p-4">
+                                <h1 class="text-white" data-toggle="counter-up">123</h1>
+                                <h6 class="text-uppercase text-white">Available<span class="d-block">Subjects</span></h6>
+                            </div>
+                        </div>
+                        <div class="col-6 px-0">
+                            <div class="bg-primary text-center p-4">
+                                <h1 class="text-white" data-toggle="counter-up">1234</h1>
+                                <h6 class="text-uppercase text-white">Online<span class="d-block">Courses</span></h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+   

@@ -159,4 +159,13 @@
   <data name="Students Reviews" xml:space="preserve">
     <value>Students Reviews</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="AcademyBio" xml:space="preserve">
+    <value>Certified Courses For Kids &amp; Teens &amp; Adults In Graphic Design, UI/UX, Digital Marketing &amp; AI</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>+20 12 87319435</value>
+  </data>
 </root>

@@ -159,4 +159,13 @@
   <data name="Students Reviews" xml:space="preserve">
     <value>آراء الطلاب</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="AcademyBio" xml:space="preserve">
+    <value>دورات معتمدة للأطفال والمراهقين والبالغين في التصميم الجرافيكي، وتجربة المستخدم، والتسويق الرقمي، والذكاء الاصطناعي</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>+20 12 87319435</value>
+  </data>
 </root>
